@@ -10,10 +10,6 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 # Load data
-import os
-print(os.getcwd())
-import os
-print(os.path.isfile('train.csv'))
 news_df = pd.read_csv('train.csv')
 news_df = news_df.fillna(' ')
 news_df['content'] = news_df['author'] + ' ' + news_df['title']
