@@ -2,6 +2,7 @@ import streamlit as st
 import numpy as np
 import re
 import pandas as pd
+import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
