@@ -2,6 +2,11 @@ import streamlit as st
 import numpy as np
 import re
 import pandas as pd
+import nltk
+nltk.download('all')
+nltk.download('wordnet')
+from nltk.stem import WordNetLemmatizer
+nltk.download('stopwords')
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
