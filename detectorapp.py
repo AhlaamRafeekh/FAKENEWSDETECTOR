@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import re
 import pandas as pd
-import nltk
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -53,14 +52,15 @@ from streamlit_option_menu import option_menu
 # horizontal menu
 selected = option_menu(
     menu_title=None,  # required
-    options=["Home", "Information", "Fake News Detection"],  # required
-    icons=["house", "book", "caret-down-square-fill "],  # optional
+    options=["Home", "Fake News Detection", "Information"],  # required
+    icons=["house", "caret-down-square-fill", "book"],  # optional
     menu_icon=" cast ",  # optional
-    default_index=0,  # optional
+    default_index=1,  # optional
     orientation="horizontal",
     styles={
-        "container": {"padding": "0!important", "background-color"
+        "container": {"padding": "1!important", "background-color"
                                                 "icon": {"color": "orange", "font-size": "25px"},
+
                       "nav-link": {
                           "font-size": "25px",
                           "text-align": "left",
@@ -73,6 +73,7 @@ selected = option_menu(
     }
 
 )
+
 
 st.subheader("OUR BATTLE AGAINST FAKE NEWS")
 st.write(
