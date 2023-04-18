@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Streamlit App",
+  "version": "1.0",
+  "description": "Streamlit app browser extension",
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://ahlaamrafeekh-fakenewsdetector-detectorapp-jks0xn.streamlit.app/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
